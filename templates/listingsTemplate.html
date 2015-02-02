@@ -1,0 +1,16 @@
+<ul class="listings_id">
+    <% _.forEach(listings, function(m) { %>
+        <li>
+            <a href="#<%= m.title %>">
+                <%= m.title %>
+        </li>
+        <li>
+            <a href="#<%= m.description %>">
+                <%= m.description %>
+        </li>
+        <li>
+            <a href="#<%= m.price %>">
+                <%= m.price %>
+        </li>
+        <% }); %>
+</ul>
