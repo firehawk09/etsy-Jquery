@@ -45,7 +45,7 @@
         },
         loadTemplate: function(name) {
             //load template file for page
-            debugger;
+            // debugger;
             return $.get("./templates/" + name + ".html").then(function(data) {
                 console.log(data);
                 return data;
@@ -57,8 +57,10 @@
                 this.getData(),
                 this.loadTemplate("listingsTemplate")
             ).then(function(listings, html) {
+                console.log(listings);
                 var listingPage = document.querySelector(".wrapper");
-                var listingsId = _.template([html]);
+                var listingsId = _.template(html);
+                console.log(listingsId)
                 listingPage.innerHTML = listingsId({
                     listings: listings
                 });
