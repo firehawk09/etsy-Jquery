@@ -862,7 +862,15 @@ header {
     font-size: 2.5em;
     position: absolute;
     top: 5px;
-    left: 10px; }
+    left: 10px;
+    margin: 0 auto 0.5rem; }
+  header .searchbar {
+    border: 5px none;
+    font: bold 12px Arial, Helvetica, Sans-serif;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    width: 200px; }
   header form {
     position: absolute;
     right: 40px;
@@ -876,15 +884,14 @@ header {
     width: 200px; }
 
 #search {
-  border: 0 none;
-  font: bold 12px Arial, Helvetica, Sans-serif;
-  color: #d7d7d7; }
+  border: 5px none;
+  font: bold 12px Arial, Helvetica, Sans-serif; }
 
-.listingsId {
+.wrapper .listingsId {
   background-color: pink;
   display: inline-block;
   text-align: left;
-  width: 25%;
+  width: 19%;
   margin: auto;
   padding: 0;
   color: #400023;
