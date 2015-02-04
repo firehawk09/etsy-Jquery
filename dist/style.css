@@ -857,7 +857,7 @@ header {
   background-color: #D8505C;
   height: 5em; }
   header .name {
-    color: #414247;
+    color: #d7d7d7;
     width: 8em;
     font-size: 2.5em;
     position: absolute;
@@ -887,13 +887,17 @@ header {
   border: 5px none;
   font: bold 12px Arial, Helvetica, Sans-serif; }
 
-.wrapper .listingsId {
-  background-color: pink;
-  display: inline-block;
-  text-align: left;
-  width: 19%;
-  margin: auto;
-  padding: 0;
-  color: #400023;
-  border: 0.1em solid #ccc; }
+.wrapper {
+  width: 75%;
+  margin-left: 12.5%;
+  background-color: #C7CAC9; }
+  .wrapper .listingsId {
+    background-color: pink;
+    display: inline-block;
+    text-align: left;
+    width: 24%;
+    margin-top: 1.5em;
+    padding: 0;
+    color: #400023;
+    border: 0.1em solid #400023; }
 

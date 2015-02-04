@@ -47,16 +47,19 @@ body {
 //=================================================
 //------------------->My scss<---------------------
 //=================================================
-$darkPink: #d7d7d7;
+
+$darkPink: #C62642;
 $mediumPink: #D8505C;
 $lightPink: pink;
 $darkPurple: #400023;
-$lightGrey: #414247;
+$darkGrey: #414247;
+$mediumGrey: #d7d7d7;
+$lightGrey: #C7CAC9;
 header {
     background-color: $mediumPink;
     height: 5em;
     .name {
-        color: $lightGrey;
+        color: $mediumGrey;
         width: 8em;
         font-size: 2.5em;
         position: absolute;
@@ -92,15 +95,18 @@ header {
     // <i class="fa fa-search"></i>
 }
 .wrapper {
-    .listingsId {
+    width: 75%;
+    margin-left: 12.5%;
+    background-color: $lightGrey;
+        .listingsId {
         background-color: $lightPink;
         display: inline-block;
         text-align: left;
-        width: 19%;
-        margin: auto;
+        width: 24%;
+        margin-top: 1.5em;
         padding: 0;
         color: $darkPurple;
-        border: 0.10em solid #ccc;
+        border: 0.10em solid $darkPurple;
         .img {}
     }
 }
