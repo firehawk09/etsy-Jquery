@@ -854,10 +854,10 @@ body {
           transition: opacity .25s ease; }
 
 header {
-  background-color: #7F0046;
+  background-color: #D8505C;
   height: 5em; }
   header .name {
-    background-color: white;
+    color: #414247;
     width: 8em;
     font-size: 2.5em;
     position: absolute;

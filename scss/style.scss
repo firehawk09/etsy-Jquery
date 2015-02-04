@@ -49,15 +49,17 @@ body {
 //=================================================
 
 $darkPink: #d7d7d7;
+$mediumPink: #D8505C;
 $lightPink: pink;
 $darkPurple: #400023;
+$lightGrey: #414247;
 
 
 header {
-    background-color: #7F0046;
+    background-color: $mediumPink;
     height: 5em;
     .name {
-        background-color: white;
+        color: $lightGrey;
         width: 8em;
         font-size: 2.5em;
         position: absolute;
