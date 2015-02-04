@@ -16,7 +16,8 @@ function app(){
     ).then(function(){
         document.querySelector("html").style.opacity = 1;
         // start app?
-        var key = "hvo4ybhgni81tihncd8wlhv0";
+        var key = "hvo4ybhgni81tihncd8wlhv0",
+        secret = "donf2ympyi";
 
         new EtsyClient(key);
     })
