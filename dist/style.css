@@ -853,3 +853,40 @@ body {
   -webkit-transition: opacity .25s ease;
           transition: opacity .25s ease; }
 
+header {
+  background-color: #7F0046;
+  height: 5em; }
+  header .name {
+    background-color: white;
+    width: 8em;
+    font-size: 2.5em;
+    position: absolute;
+    top: 5px;
+    left: 10px; }
+  header form {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    width: 200px; }
+  header button {
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
+    width: 14em; }
+  header input {
+    width: 200px; }
+
+#search {
+  border: 0 none;
+  font: bold 12px Arial, Helvetica, Sans-serif;
+  color: #d7d7d7; }
+
+.listingsId {
+  background-color: pink;
+  display: inline-block;
+  text-align: left;
+  width: 25%;
+  margin: auto;
+  padding: 0;
+  color: #400023;
+  border: 0.1em solid #ccc; }
+

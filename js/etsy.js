@@ -31,7 +31,7 @@
     EtsyClient.prototype = {
         URLs: {
             listings: "https://openapi.etsy.com/v2/listings/active",
-            listingId: "https://openapi.etsy.com/v2/listings/:listing_id"
+
 
         },
 

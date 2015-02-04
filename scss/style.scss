@@ -1,7 +1,6 @@
 @import "../bower_components/normalize-scss/_normalize.scss";
 @import "../bower_components/typeplate-starter-kit/css/_typeplate.scss";
 @import "./mixins.scss";
-
 /**
  * BOX-SIZING
  */
@@ -9,7 +8,6 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
-
 /**
  * GRIDS
  */
@@ -20,7 +18,6 @@
     font-size: 0;
     text-align: justify;
     position: relative;
-
     & > * {
         font-size: medium;
         text-align: left;
@@ -28,7 +25,6 @@
         width: 100%;
         vertical-align: top;
     }
-
     &:after {
         display: inline-block;
         width: 100%;
@@ -36,16 +32,67 @@
         font-size: medium;
     }
 }
-
 @include gridify(2, 400);
 @include gridify(4, 600);
-
 /**
  * GENERAL
  */
 
-img {max-width:100%;}
-
+img {
+    max-width: 100%;
+}
 body {
     transition: opacity .25s ease;
+}
+//=================================================
+//------------------->My scss<---------------------
+//=================================================
+
+$darkPink: #d7d7d7;
+$lightPink: pink;
+$darkPurple: #400023;
+
+
+header {
+    background-color: #7F0046;
+    height: 5em;
+    .name {
+        background-color: white;
+        width: 8em;
+        font-size: 2.5em;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+    form {
+        position: absolute;
+        right: 40px;
+        top: 20px;
+        width: 200px;
+    }
+    button {
+        border-radius: 20px;
+        width: 14em;
+    }
+    input {
+        width: 200px;
+    }
+}
+#search {
+    border: 0 none;
+    font: bold 12px Arial, Helvetica, Sans-serif;
+    color: $darkPink;
+    // <i class="fa fa-search"></i>
+}
+.listingsId {
+    background-color: $lightPink;
+    display: inline-block;
+    text-align: left;
+    width: 25%;
+    margin: auto;
+    padding: 0;
+    color: $darkPurple;
+    border: 0.10em solid #ccc;
+
+    .img {}
 }

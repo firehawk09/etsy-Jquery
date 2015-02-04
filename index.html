@@ -2,19 +2,22 @@
 <html style="opacity: 0;">
 
 <head>
-    <title></title>
+    <title>Etsy Betsy Spider</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-
-<form action="/" method="POST">
-    <input type="text" placeholder= "Enter Keywords">
-    <button>Search</button>
-</form>
-
-    <div class="wrapper">
-
+    <header>
+        <div class="name">
+            Etsy Betsy Spider
+        </div>
+        <form method="get" action="/search" id="search">
+            <input name="q" type="text" size="40" placeholder="Search..." />
+        </form>
+    </header>
+    <div class="grid">
+        <div class="wrapper">
+        </div>
     </div>
 
     <script type="text/javascript" src="./bower_components/Loader/loader.js" id="loaderjs" data-app="./js/app.js"></script>
