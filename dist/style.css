@@ -890,6 +890,7 @@ header {
 
 .wrapper {
   width: 75%;
+  margin-top: 1em;
   margin-left: 12.5%;
   background-color: #C7CAC9; }
   .wrapper .listingsId {
