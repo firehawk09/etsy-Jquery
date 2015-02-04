@@ -47,7 +47,6 @@ body {
 //=================================================
 //------------------->My scss<---------------------
 //=================================================
-
 $darkPink: #C62642;
 $mediumPink: #D8505C;
 $lightPink: pink;
@@ -71,41 +70,52 @@ header {
         border: 5px none;
         font: bold 12px Arial, Helvetica, Sans-serif;
         position: absolute;
-        right: 40px;
-        top: 20px;
-        width: 200px;
+        right: 2em;
+        top: 1em;
     }
     form {
         position: absolute;
-        right: 40px;
-        top: 20px;
+        right: 7em;
+        top: 1em;
         width: 200px;
+        border-radius: 20px;
     }
     button {
         border-radius: 20px;
-        width: 14em;
+        width: 8em;
+        position: absolute;
+        right: -8.25em;
+        top: 0;
+        background-color: white;
     }
     input {
         width: 200px;
     }
 }
-#search {
-    border: 5px none;
-    font: bold 12px Arial, Helvetica, Sans-serif;
-    // <i class="fa fa-search"></i>
-}
 .wrapper {
     width: 75%;
     margin-left: 12.5%;
     background-color: $lightGrey;
-        .listingsId {
+    .listingsId {
         background-color: $lightPink;
         display: inline-block;
         text-align: left;
-        width: 24%;
+        width: 22.75%;
         margin-top: 1.5em;
+        margin-left: .5em;
         padding: 0;
         color: $darkPurple;
-        .img {}
+        border: 0.15em solid $darkPurple;
+        .title {
+            margin-left: 0.1em;
+        }
+        .img {
+            max-width: 95%;
+            margin: 2.5%;
+        }
+        div {
+            // position: relative;
+            // left: 5px;
+        }
     }
 }
