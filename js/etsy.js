@@ -29,6 +29,7 @@
     }
 
     EtsyClient.prototype = {
+
         URLs: {
             listings: "https://openapi.etsy.com/v2/listings/active",
 
@@ -40,11 +41,8 @@
         },
 
         getData: function() {
-            //Pull listing data from etsy
-            // return $.getJSON("https://openapi.etsy.com/v2/listings/active.js?api_key=hvo4ybhgni81tihncd8wlhv0&callback=?")
             var dataURL = this.URLs.listings + ".js?" + "includes=Images(url_570xN)&" + this.access_key() + "&callback=?"
-            //https://openapi.etsy.com/v2/listings/active.js?includes=images(url_570xN)&api_key=hvo4ybhgni81tihncd8wlhv0&callback=?
-            //https://openapi.etsy.com/v2/listings/active.js?includes=Images(url_570xN)&api_key=hvo4ybhgni81tihncd8wlhv0&callback=mycallback
+
             return $.getJSON(dataURL)
                 .then(function(data) {
                     console.log(dataURL)
