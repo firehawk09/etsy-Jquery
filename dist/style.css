@@ -895,7 +895,6 @@ header {
   background-color: #C7CAC9; }
   .wrapper .listings {
     background-color: pink;
-    display: inline-block;
     color: #400023;
     border: 0.15em solid #400023;
     margin-top: 1.5em;
