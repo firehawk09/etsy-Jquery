@@ -1,0 +1,18 @@
+    <% results.forEach(function(l){ %>
+        <div class="listings">
+            <a href="#listing/<%= l.listing_id %>">
+                <div class="img">
+                    <% if(l.Images instanceof Array){ %>
+                    <img src="<%= l.Images[0].url_570xN %>">
+                    <% } %>
+                </div>
+                <div class="title">
+                    <h6><%= l.title %></h6>
+                </div>
+                <div class="price">
+                    <p><%= l.price %><%= l.currency_code %></p>
+                </div>
+            </a>
+        </div>
+    <% }) %>
+
