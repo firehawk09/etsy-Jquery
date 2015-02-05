@@ -32,8 +32,9 @@
         font-size: medium;
     }
 }
-@include gridify(2, 400);
-@include gridify(4, 600);
+@include gridify(2, 350);
+@include gridify(3, 500);
+@include gridify(4, 700);
 /**
  * GENERAL
  */
@@ -92,6 +93,10 @@ header {
         width: 200px;
     }
 }
+.whiteLine {
+    height: 1.5em;
+    background-color: white;
+}
 .wrapper {
     width: 85%;
     margin-top: 1em;
@@ -101,9 +106,8 @@ header {
         background-color: $lightPink;
         color: $darkPurple;
         border: 0.15em solid $darkPurple;
-        margin-top: 1.5em;
         vertical-align: top;
-
+        margin-bottom: 1em;
         .title {
             margin-left: 0.1em;
         }

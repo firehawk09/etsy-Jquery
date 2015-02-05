@@ -835,12 +835,16 @@ abbr[title]:hover {
     content: "";
     font-size: medium; }
 
-@media only screen and (min-width: 400px) {
-  .grid-2-400 > * {
+@media only screen and (min-width: 350px) {
+  .grid-2-350 > * {
     width: 48%; } }
 
-@media only screen and (min-width: 600px) {
-  .grid-4-600 > * {
+@media only screen and (min-width: 500px) {
+  .grid-3-500 > * {
+    width: 31.33333%; } }
+
+@media only screen and (min-width: 700px) {
+  .grid-4-700 > * {
     width: 23%; } }
 
 /**
@@ -888,6 +892,10 @@ header {
   header input {
     width: 200px; }
 
+.whiteLine {
+  height: 1.5em;
+  background-color: white; }
+
 .wrapper {
   width: 85%;
   margin-top: 1em;
@@ -897,8 +905,8 @@ header {
     background-color: pink;
     color: #400023;
     border: 0.15em solid #400023;
-    margin-top: 1.5em;
-    vertical-align: top; }
+    vertical-align: top;
+    margin-bottom: 1em; }
     .wrapper .listings .title {
       margin-left: 0.1em; }
     .wrapper .listings .img {
