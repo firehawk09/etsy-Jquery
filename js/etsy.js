@@ -11,6 +11,7 @@
         this.listingData = [];
         this.baseUrl = "https://openapi.etsy.com/v2";
         this.listings = this.baseUrl + "/listings/active";
+        this.details = this.baseUrl + "/listings/";
 
         var self = this;
 
@@ -18,14 +19,15 @@
 
             routes: {
                 "": "search",
-                "listing/:listing_ID": "details",
-                "search/:keywords": "search"
+                "search/:keywords": "search",
+                "listing/:listing_id": "details"
+
             },
             search: function(keywords) {
                 self.draw(keywords);
             },
-            details: function(listing_ID) {
-                // self.drawDetails(listing_ID)
+            details: function(listing_id) {
+                self.drawDetails(listing_id)
             },
             initialize:function(){
                 Backbone.history.start()
@@ -33,7 +35,6 @@
         })
         var router = new EtsyRouter();
 
-        // this.draw();
     }
 
     EtsyClient.prototype = {
@@ -49,24 +50,31 @@
             return this.listings + ".js?" + "includes=Images&" + this.access_key() + this.keyword() + "&callback=?"
         },
 
-        getData: function() {console.log(this.getDataURL());
-            return $.getJSON(this.getDataURL())
-                .then(function(data) {
-                console.log(data.results);
+        getDetailURL: function(){
+            return this.details + this.listing_id + ".js?" + "includes=Images&" + this.access_key() + "&callback=?"
+        },
+
+        getData: function() {
+            return $.getJSON(this.getDataURL()
+                ).then(function(data) {
                     return data;
                 })
         },
 
-
-        // keywordSearch: function() {
-        //     keywordURL = getDataURL + "&keywords=" + this.keywords
-        //     return keywordURL;
-        // },
+        getDetailData: function() {
+            return $.getJSON(this.getDetailURL()
+                ).then(function(data) {
+                    console.log(this.getDetailURL)
+                    return data;
+                })
+        },
 
         loadTemplate: function(name) {
             //load template file for page
             // debugger;
-            return $.get("./templates/" + name + ".html").then(function(data) {
+            return $.get("./templates/" + name + ".html"
+                ).then(function(data) {
+                // console.log(data);
                 return data;
             })
         },
@@ -74,9 +82,7 @@
 
         draw: function(keywords) {
             this.keywords = keywords;
-
-
-            //template and user data loaded, draw page
+            //template and active listings data loaded, draw page
             $.when(
                 this.getData(keywords),
                 this.loadTemplate("listTemp")
@@ -84,6 +90,19 @@
                 var templatingFn = _.template(html)
                 document.querySelector('.wrapper').innerHTML = templatingFn(listings)
             })
+        },
+
+        drawDetails: function(listing_id){
+            this.listing_id = listing_id;
+            //template and listing data loaded, now draw page
+            $.when(
+                this.getDetailData(listing_id),
+                this.loadTemplate("detailsTemp")
+                ).then(function(data, html) {
+                    console.log(data)
+                    var templatingFn2 = _.template(html)
+                    document.querySelector('.wrapper2').innerHTML = templatingFn2(data)
+                })
         }
     }
 
