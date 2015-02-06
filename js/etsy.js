@@ -64,8 +64,7 @@
         getDetailData: function() {
             return $.getJSON(this.getDetailURL()
                 ).then(function(data) {
-                    console.log(this.getDetailURL)
-                    return data;
+                    return data.results;
                 })
         },
 
@@ -96,12 +95,13 @@
             this.listing_id = listing_id;
             //template and listing data loaded, now draw page
             $.when(
-                this.getDetailData(listing_id),
+                this.getDetailData(this.listing_id),
                 this.loadTemplate("detailsTemp")
                 ).then(function(data, html) {
+
                     console.log(data)
                     var templatingFn2 = _.template(html)
-                    document.querySelector('.wrapper2').innerHTML = templatingFn2(data)
+                    document.querySelector('.wrapper2').innerHTML = templatingFn2({key: data})
                 })
         }
     }

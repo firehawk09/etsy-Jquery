@@ -860,6 +860,13 @@ body {
 header {
   background-color: #D8505C;
   height: 5em; }
+  header .homelink {
+    height: 2em;
+    width: 5em;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background-color: #C7CAC9; }
   header .name {
     color: #d7d7d7;
     width: 8em;

@@ -58,6 +58,14 @@ $lightGrey: #C7CAC9;
 header {
     background-color: $mediumPink;
     height: 5em;
+    .homelink {
+        height: 2em;
+        width: 5em;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        background-color: $lightGrey;
+    }
     .name {
         color: $mediumGrey;
         width: 8em;
