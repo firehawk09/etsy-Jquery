@@ -860,13 +860,6 @@ body {
 header {
   background-color: #D8505C;
   height: 5em; }
-  header .homelink {
-    height: 2em;
-    width: 5em;
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    background-color: #C7CAC9; }
   header .name {
     color: #d7d7d7;
     width: 8em;
@@ -906,10 +899,9 @@ header {
 .wrapper {
   width: 85%;
   margin-top: 1em;
-  margin-left: 7.5%;
-  background-color: #C7CAC9; }
+  margin-left: 7.5%; }
   .wrapper .listings {
-    background-color: pink;
+    background-color: #C7CAC9;
     color: #400023;
     border: 0.15em solid #400023;
     vertical-align: top;

@@ -1,6 +1,6 @@
 ;
 (function() {
-
+"use strict";
     //===================================================================================
     //--------------------Two screens, one for item search, one for item detail
     //===================================================================================
@@ -101,7 +101,7 @@
 
                     console.log(data)
                     var templatingFn2 = _.template(html)
-                    document.querySelector('.wrapper2').innerHTML = templatingFn2({key: data})
+                    document.querySelector('.wrapper').innerHTML = templatingFn2({key: data})
                 })
         }
     }

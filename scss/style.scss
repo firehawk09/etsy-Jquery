@@ -58,14 +58,6 @@ $lightGrey: #C7CAC9;
 header {
     background-color: $mediumPink;
     height: 5em;
-    .homelink {
-        height: 2em;
-        width: 5em;
-        position: absolute;
-        top: 5px;
-        left: 10px;
-        background-color: $lightGrey;
-    }
     .name {
         color: $mediumGrey;
         width: 8em;
@@ -109,9 +101,8 @@ header {
     width: 85%;
     margin-top: 1em;
     margin-left: 7.5%;
-    background-color: $lightGrey;
     .listings {
-        background-color: $lightPink;
+        background-color: $lightGrey;
         color: $darkPurple;
         border: 0.15em solid $darkPurple;
         vertical-align: top;
@@ -122,10 +113,6 @@ header {
         .img {
             max-width: 95%;
             margin: 2.5%;
-        }
-        div {
-            // position: relative;
-            // left: 5px;
         }
     }
 }
